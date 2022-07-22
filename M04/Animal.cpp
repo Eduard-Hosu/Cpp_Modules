@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 18:48:40 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/21 19:06:04 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/07/22 03:38:06 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,19 +32,30 @@ Animal::Animal( std::string type ) : _type(type)
 
 Animal::Animal( Animal const &animalCoppy )
 {
-	std::cout << " [Animal] Coppy constructor called" << std::endl
+	std::cout << " [Animal] Coppy constructor called" << std::endl;
 	*this = animalCoppy;
 
 	return;
 }
 
-Animal		&Animal::operator=( Animal const &animalCoppy )
+Animal			&Animal::operator=( Animal const &animalCoppy )
 {
 	std::cout << " [Animal] Coppy assigment operator called" << std::endl;
 	if ( this != &animalCoppy )
 	{
-		this->getType() = animalCoppy.getType();
+		this->_type = animalCoppy._type;
 	}
 	
 	return *this;
+}
+
+void			Animal::makeSound() const
+{
+	std::cout << "[Animal] Some animal noises!" << std::endl;
+	return;
+}
+
+std::string		Animal::getType( void ) const
+{
+	return this->_type;
 }
