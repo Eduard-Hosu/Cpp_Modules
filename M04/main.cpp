@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 03:01:01 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/22 03:04:03 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/07/22 03:42:19 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int main( void )
 
 	std::cout << animal->getType() << std::endl;
 	std::cout << dog->getType() << std::endl;
+
+	dog->makeSound();
 
 	return 0;
 }
