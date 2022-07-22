@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 17:53:57 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/22 03:36:15 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/07/22 12:08:05 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ class Animal
 		Animal &		operator=( Animal const &animalCoppy );
 
 		std::string		getType() const;
-		// std::string		setType();
 		virtual void	makeSound() const;
 
 };
