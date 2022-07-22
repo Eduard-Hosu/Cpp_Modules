@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/22 03:01:01 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/22 13:36:43 by ehosu            ###   ########.fr       */
+/*   Created: 2022/07/22 12:53:15 by ehosu             #+#    #+#             */
+/*   Updated: 2022/07/22 13:22:08 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
-#include "Cat.hpp"
+#if !defined(CAT_HPP)
+# define CAT_HPP
+# include "Animal.hpp"
 
-int main( void )
+class Cat : public Animal
 {
+	public:
+		Cat();
+		Cat( Cat const &catCoppy );
+		~Cat();
 
-	const Animal *animal = new Animal();
-	const Animal *dog = new Dog();
-	const Animal *cat = new Cat();
+		Cat &		operator=( Cat const &catCoppy );
+		void		makeSound() const;
+};
 
-	std::cout << animal->getType() << std::endl;
-	std::cout << dog->getType() << std::endl;
-	std::cout << cat->getType() << std::endl;
-
-	dog->makeSound();
-	cat->makeSound();
-
-	delete dog;
-	delete cat;
-
-	return 0;
-}
+#endif // CAT_HPP
