@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/22 02:21:41 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/23 15:17:29 by ehosu            ###   ########.fr       */
+/*   Created: 2022/07/23 12:20:41 by ehosu             #+#    #+#             */
+/*   Updated: 2022/07/23 14:52:50 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#if !defined(DOG_HPP)
-# define DOG_HPP
+#if !defined(BRAIN_HPP)
+# define BRAIN_HPP
+# include <iostream>
+# define MAX_NUMBER 100
 
-# include "Animal.hpp"
-# include "Brain.hpp"
-
-class Dog : public Animal
+class Brain
 {
 	private:
-		Brain			*_brain;
+		std::string		_ideas[MAX_NUMBER];
 	public:
-		Dog();
-		Dog( Dog const &dogCoppy );
-		~Dog();
+		Brain();
+		Brain( std::string type );
+		Brain( Brain const &brainCoppy );
+		~Brain();
 
-		Dog &			operator=( Dog const &dogCoppy );
-		void			makeSound() const;
-		void			setIdea( unsigned int idea_index, std::string idea );
-		std::string		getIdea( unsigned int idea_index ) const;
+	Brain &				operator=( Brain const &brainCoppy );
+	void				setIdea( unsigned int idea_index, std::string idea );
+	std::string			getIdea( unsigned int idea_index ) const;
+	
 };
 
-#endif // DOG_HPP
+#endif // BRAIN_HPP

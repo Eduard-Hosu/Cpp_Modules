@@ -6,46 +6,50 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 03:01:01 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/23 09:22:54 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/07/23 15:27:47 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "WrongCat.hpp"
+#include "Brain.hpp"
+#define MAX_ANIMALS 10
 
 int main( void )
 {
+	Animal *animals[MAX_ANIMALS];
 
-	std::cout << "**** Animals *****" << std::endl;
-	const Animal *animal = new Animal();
-	const Animal *dog = new Dog();
-	const Animal *cat = new Cat();
+	//construct
+	for (unsigned int i = 0; i < MAX_ANIMALS; i++)
+	{
+		if (i < MAX_ANIMALS / 2 )
+			animals[i] = new Dog;
+		else
+			animals[i] = new Cat;
+	}
 
-	std::cout << animal->getType() << std::endl;
+	Dog *dog = new Dog();
+	Cat *cat = new Cat();
+
 	std::cout << dog->getType() << std::endl;
 	std::cout << cat->getType() << std::endl;
 
 	dog->makeSound();
 	cat->makeSound();
 
+	//dog
+	// dog->getIdea(1);
+	std::cout << "I'm thinking to: " << dog->getIdea(3) << std::endl;
+	dog->setIdea(1, "I want to go out");
+	std::cout << "I'm thinking to: " << dog->getIdea(1) << std::endl;
+
 	delete dog;
 	delete cat;
-	delete animal;
-
-	std::cout << "**** Wrong Animals *****" << std::endl;
-
-	const WrongAnimal *wrong_animal = new WrongAnimal();
-	const WrongAnimal *wrong_cat = new WrongCat();
-
-	std::cout << wrong_animal->getType() << std::endl;
-	std::cout << wrong_cat->getType() << std::endl;
-
-	wrong_animal->makeSound();
-	wrong_cat->makeSound();
-
-	delete wrong_animal;
-	delete wrong_cat;
-
+	
+	//delete
+	for (unsigned int i = 0; i < MAX_ANIMALS; i++)
+		delete animals[i];
+	
 	return 0;
 }
