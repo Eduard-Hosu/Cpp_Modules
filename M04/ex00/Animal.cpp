@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 18:48:40 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/22 03:38:06 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/07/23 09:19:46 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,7 @@ Animal			&Animal::operator=( Animal const &animalCoppy )
 {
 	std::cout << " [Animal] Coppy assigment operator called" << std::endl;
 	if ( this != &animalCoppy )
-	{
 		this->_type = animalCoppy._type;
-	}
 	
 	return *this;
 }

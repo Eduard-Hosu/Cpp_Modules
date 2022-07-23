@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/21 17:53:57 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/22 12:08:05 by ehosu            ###   ########.fr       */
+/*   Created: 2022/07/22 16:41:29 by ehosu             #+#    #+#             */
+/*   Updated: 2022/07/23 09:05:50 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#if !defined(ANIMAL_HPP)
-# define ANIMAL_HPP
+#if !defined(WRONG_ANIMAL_HPP)
+# define WRONG_ANIMAL_HPP
 # include <iostream>
-# include <string>
 
-class Animal
+class WrongAnimal
 {
 	protected:
 		std::string		_type;
+		
 	public:
-		Animal();
-		Animal( std::string type );
-		Animal( Animal const &animalCoppy );
-		virtual			~Animal();
+		WrongAnimal();
+		WrongAnimal( std::string type );
+		WrongAnimal( WrongAnimal const &wrongAnimalCoppy );
+		virtual				~WrongAnimal();
 
-		Animal &		operator=( Animal const &animalCoppy );
-
-		std::string		getType() const;
-		virtual void	makeSound() const;
-
+		WrongAnimal &		operator=( WrongAnimal const &wrongAnimalCoppy );
+		std::string			getType() const;
+		virtual void		makeSound() const;
 };
 
-#endif // ANIMAL_HPP
+#endif // WRONG_ANIMAL_HPP
