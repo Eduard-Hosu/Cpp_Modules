@@ -6,7 +6,7 @@
 #    By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 10:50:39 by ehosu             #+#    #+#              #
-#    Updated: 2022/07/23 14:10:24 by ehosu            ###   ########.fr        #
+#    Updated: 2022/07/24 16:19:27 by ehosu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ RM = rm -rf
 
 CC = c++
 
-CFLAGS = -std=c++98 -Wall -Wextra -Werror
+CFLAGS = -g -std=c++98 -Wall -Wextra -Werror
 
 all:	$(NAME)
 
