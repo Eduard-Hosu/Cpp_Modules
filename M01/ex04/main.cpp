@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 08:54:55 by ehosu             #+#    #+#             */
-/*   Updated: 2022/06/28 16:50:45 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/07/26 15:08:09 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,11 @@ int	main(int argc, char **argv)
 		std::cout << "Ivalid number of arguments!" << std::endl;
 		return (0);
 	}
-	if ( argv[1][0] == '\0' || argv[2][0] == '\0' || argv[3][0] == '\0' )
+	if ( argv[1][0] == '\0' || argv[2][0] == '\0' )
+	{
+		std::cout << "Ivalid content!" << std::endl;
 		return (0);
+	}
 
 	std::string	filename = argv[1];
 	std::string	s1 = argv[2];

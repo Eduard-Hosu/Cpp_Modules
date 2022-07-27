@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 15:13:54 by ehosu             #+#    #+#             */
-/*   Updated: 2022/06/24 16:41:30 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/07/26 14:56:53 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ HumanA::~HumanA( void )
 
 void	HumanA::attack()
 {
-	std::cout << _name << "attacks with their " << _weapon.getType() << std::endl;
+	std::cout << _name << " attacks with their " << _weapon.getType() << std::endl;
 	return;
 }

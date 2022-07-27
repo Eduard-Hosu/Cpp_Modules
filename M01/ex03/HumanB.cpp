@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 15:36:34 by ehosu             #+#    #+#             */
-/*   Updated: 2022/06/24 16:48:41 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/07/26 14:56:01 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ void	HumanB::setWeapon( Weapon&	weapon )
 
 void	HumanB::attack()
 {
-	std::cout << _name << "attacks with their ";
+	std::cout << _name << " attacks with their ";
 	if (_weapon)
 		std::cout << (*_weapon).getType() << std::endl;
 	else
-		std::cout << "hends" << std::endl;
+		std::cout << "hands" << std::endl;
 	
 	return;
 }
