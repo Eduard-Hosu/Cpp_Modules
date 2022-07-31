@@ -6,12 +6,12 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 16:56:46 by ehosu             #+#    #+#             */
-/*   Updated: 2022/06/22 19:36:55 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/07/28 17:19:51 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_HPP
-# define ZPMBIE_HPP
+# define ZOMBIE_HPP
 # include <iostream>
 # include <string>
 # include <iomanip>
