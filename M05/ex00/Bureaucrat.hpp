@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 17:42:43 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/30 11:43:51 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/07/31 10:54:06 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Bureaucrat
 	private:
 		const std::string	_name;
 		int					_grade;
+		void				_checkGrade() const;
 	public:
 		Bureaucrat();
 		Bureaucrat( const std::string name );

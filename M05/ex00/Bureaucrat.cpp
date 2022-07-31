@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 14:52:28 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/30 11:47:25 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/07/31 11:11:22 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,32 +32,18 @@ Bureaucrat::Bureaucrat( const std::string name ) : _name(name)
 	return;
 }
 
-Bureaucrat::Bureaucrat( const int grade ) : _name("No_name")
+Bureaucrat::Bureaucrat( const int grade ) : _name("No_name"),  _grade(grade)
 {
 	std::cout << " [Bureaucrat] Default constructor called with grade" << std::endl;
-	if (grade > MIN_GRADE)
-	{
-		throw Bureaucrat::gradeTooLowException();
-	} else if (grade < MAX_GRADE)
-	{
-		throw Bureaucrat::gradeTooHighException();
-	}
-	_grade = grade;
+	this->_checkGrade();
 
 	return;
 }
 
-Bureaucrat::Bureaucrat( const std::string name, const int grade ) : _name(name)
+Bureaucrat::Bureaucrat( const std::string name, const int grade ) : _name(name), _grade(grade)
 {
 	std::cout << " [Bureaucrat] Default constructor called with grade and name" << std::endl;
-	if (grade > MIN_GRADE)
-	{
-		throw Bureaucrat::gradeTooLowException();
-	} else if (grade < MAX_GRADE)
-	{
-		throw Bureaucrat::gradeTooHighException();
-	}
-	_grade = grade;
+	this->_checkGrade();
 
 	return;
 }
@@ -89,16 +75,16 @@ int					Bureaucrat::getGrade() const
 
 void				Bureaucrat::incGrade( int const &grade )
 {
-	if ( _grade - grade < MAX_GRADE )
-		throw gradeTooHighException();
+	this->_grade -= grade;
+	this->_checkGrade();
 
 	return;
 }
 
 void				Bureaucrat::decGrade( int const &grade )
 {
-	if ( _grade + grade > MIN_GRADE )
-		throw gradeTooLowException();
+	this->_grade += grade;
+	this->_checkGrade();
 	
 	return;
 }
@@ -128,15 +114,21 @@ Bureaucrat			&Bureaucrat::operator=( Bureaucrat const &bureCoppy )
 	return *this;
 }
 
-std::ostream		&operator<<( std::ostream &COUT, Bureaucrat const &bureCoppy )
+void				Bureaucrat::_checkGrade() const
 {
-	if (bureCoppy.getGrade() > MIN_GRADE)
+	if (this->getGrade() > MIN_GRADE)
 	{
 		throw Bureaucrat::gradeTooLowException();
-	} else if (bureCoppy.getGrade() < MAX_GRADE)
+	} else if (this->getGrade() < MAX_GRADE)
 	{
 		throw Bureaucrat::gradeTooHighException();
 	}
+
+	return;
+}
+
+std::ostream		&operator<<( std::ostream &COUT, Bureaucrat const &bureCoppy )
+{
 	COUT << "Bureaucrat " << "name is " << bureCoppy.getName() << " and the grade is " << bureCoppy.getGrade() << std::endl;
 
 	return COUT;
