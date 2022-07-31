@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 14:52:28 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/31 11:11:22 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/07/31 13:50:37 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,5 +141,5 @@ const char* 		Bureaucrat::gradeTooHighException::what() const throw()
 
 const char* 		Bureaucrat::gradeTooLowException::what() const throw()
 {
-	return ("Grade is too high!");
+	return ("Grade is to low!");
 }
