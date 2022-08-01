@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 13:30:31 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/06 18:18:25 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/01 16:02:08 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ int main( void )
 	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
 	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
 	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+
 	return 0;
 }

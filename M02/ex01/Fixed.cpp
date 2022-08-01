@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 12:47:11 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/06 18:31:31 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/01 15:57:52 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,14 @@ Fixed::Fixed( Fixed const &fixedCoppy )
 Fixed::Fixed( int const numb )
 {
 	std::cout << "Int constructor called" << std::endl;
-	_fixedPointNumber = numb * pow( 2, _numberFractionalBits );
+	_fixedPointNumber = numb << _numberFractionalBits;
 	return;
 }
 
 Fixed::Fixed( float const numb )
 {
 	std::cout << "Float constructor called" << std::endl;
-	_fixedPointNumber = roundf( numb * pow(2, _numberFractionalBits) );
+	_fixedPointNumber = roundf( numb * (1 << _numberFractionalBits) );
 	return;
 }
 
@@ -68,12 +68,12 @@ int		Fixed::getRawBits( void ) const
 
 int		Fixed::toInt( void ) const
 {
-	return (_fixedPointNumber / pow(2, _numberFractionalBits));
+	return (this->_fixedPointNumber >> _numberFractionalBits);
 }
 
 float	Fixed::toFloat( void ) const
 {
-	return (_fixedPointNumber / pow(2, _numberFractionalBits));
+	return (this->_fixedPointNumber / (float)(1 << _numberFractionalBits));
 }
 
 std::ostream &		operator<<( std::ostream &o, Fixed const &fixedCoppy )

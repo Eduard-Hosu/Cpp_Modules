@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 12:01:43 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/06 17:26:41 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/01 15:53:33 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ class Fixed
 		void				setRawBits( int const raw );
 		float				toFloat( void ) const;
 		int					toInt( void ) const;
+		
 };
 
 std::ostream &		operator<<( std::ostream &o, Fixed const &fixedCoppy );
