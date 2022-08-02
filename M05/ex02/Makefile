@@ -6,11 +6,11 @@
 #    By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/28 17:41:39 by ehosu             #+#    #+#              #
-#    Updated: 2022/08/01 20:11:13 by ehosu            ###   ########.fr        #
+#    Updated: 2022/08/02 11:33:08 by ehosu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex03
+NAME = ex02
 
 HEADERS = Bureaucrat.hpp Form.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp \
 			PresidentialPardonForm.hpp
