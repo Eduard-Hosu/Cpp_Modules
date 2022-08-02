@@ -1,0 +1,46 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/07/28 17:41:39 by ehosu             #+#    #+#              #
+#    Updated: 2022/08/01 20:11:13 by ehosu            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = ex03
+
+HEADERS = Bureaucrat.hpp Form.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp \
+			PresidentialPardonForm.hpp
+
+SRCS = Bureaucrat.cpp main.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp \
+			PresidentialPardonForm.cpp
+
+OBJS = ${SRCS:.cpp=.o}
+
+RM = rm -rf
+
+CC = c++
+
+CFLAGS = -g -std=c++98 -Wall -Wextra -Werror
+
+all:	$(NAME)
+
+%.o: %.cpp
+	$(CC) -c $(CFLAGS) -o $@ $<	
+
+$(NAME): $(OBJS)
+	$(CC) -o $(NAME) $(CFLAGS) $(OBJS)
+
+clean:
+	${RM} ${OBJS}
+
+fclean: clean
+	${RM} $(NAME)
+
+re:	fclean all
+
+.PHONY:
+	all clean fclean re
