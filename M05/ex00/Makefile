@@ -6,11 +6,11 @@
 #    By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/28 17:41:39 by ehosu             #+#    #+#              #
-#    Updated: 2022/07/29 19:28:14 by ehosu            ###   ########.fr        #
+#    Updated: 2022/08/02 11:33:25 by ehosu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex03
+NAME = ex00
 
 HEADERS = Bureaucrat.hpp
 
