@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:21:23 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/08 18:46:14 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/08 18:49:52 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,20 @@
 
 int main()
 {
-	int a = 21;
-	int b = 42;
+	int a = 2;
+	int b = 3;
+	::swap( a, b );
+	std::cout << "a = " << a << ", b = " << b << std::endl;
+	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
+	std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
 
-	float x = 21.5f;
-	float y = 42.5f;
+	std::string c = "chaine1";
+	std::string d = "chaine2";
 
-	//int
-	std::cout << "Max of " << a << " and " << b << " is ";
-	std::cout << max<int>(a, b) << std::endl;
-
-	std::cout << "Min of " << a << " and " << b << " is ";
-	std::cout << min<int>(a, b) << std::endl;
-
-	std::cout << "before swap: a = " << a << " and b = " << b << std::endl;
-	swap<int>(a, b);
-	std::cout << "after swap: a = " << a << " and b = " << b << std::endl;
-
-	//float
-	std::cout << "Max of " << x << " and " << y << " is ";
-	std::cout << max<float>(x, y) << std::endl;
-
-	std::cout << "Min of " << x << " and " << y << " is ";
-	std::cout << min<float>(x, y) << std::endl;
-
-	std::cout << "before swap: x = " << x << " and y = " << y << std::endl;
-	swap<float>(x, y);
-	std::cout << "after swap: x = " << x << " and y = " << y << std::endl;
+	::swap(c, d);
+	std::cout << "c = " << c << ", d = " << d << std::endl;
+	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
+	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
 
 	return 1;
 }
