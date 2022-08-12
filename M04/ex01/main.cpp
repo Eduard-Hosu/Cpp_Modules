@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 03:01:01 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/23 16:16:59 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/12 15:38:42 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,22 @@ int main( void )
 
 	//dog
 	// dog->getIdea(1);
+	// Dog basic;
+	// {
+	// 	basic.setIdea(1, "Some wrong ideas");
+	// 	basic.setIdea(2, "Something");
+	// 	Dog tmp = basic;
+	// 	std::cout << "I'm thinking to: " << basic.getIdea(1) << std::endl;
+	// 	std::cout << "I'm thinking to: " << basic.getIdea(2) << std::endl;
+	// 	std::cout << "I'm thinking to: " << tmp.getIdea(1) << std::endl;
+	// 	std::cout << "I'm thinking to: " << tmp.getIdea(2) << std::endl;
+
+		// delete basic;
+		// std::cout << "I'm thinking to: " << tmp.getIdea(1) << std::endl;
+
+	// }
+
+	
 	std::cout << "I'm thinking to: " << dog->getIdea(3) << std::endl;
 	dog->setIdea(1, "I want to go out");
 	std::cout << "I'm thinking to: " << dog->getIdea(1) << std::endl;

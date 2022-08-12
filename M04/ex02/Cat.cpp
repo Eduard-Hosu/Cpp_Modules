@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 12:57:17 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/23 13:41:07 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/12 15:50:33 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ Cat		&Cat::operator=( Cat const &catCoppy )
 	if ( this != &catCoppy )
 	{
 		this->_type = catCoppy._type;
-		*_brain = *(catCoppy._brain);
+		this->_brain = new Brain();
 	}
 	
 	return *this;

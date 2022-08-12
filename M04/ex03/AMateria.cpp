@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 16:40:19 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/24 17:49:41 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/12 12:31:25 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ AMateria			&AMateria::operator=( AMateria const &aMateriaCoppy )
 	std::cout << " [AMateria] Coppy assigment operator called" << std::endl;
 	if ( this != &aMateriaCoppy )
 	{
-		//TO DO: needs to e updated
 		this->_type = aMateriaCoppy._type;
 	}
 	
