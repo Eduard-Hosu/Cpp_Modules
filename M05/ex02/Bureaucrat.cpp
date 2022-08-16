@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 14:52:28 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/01 18:13:51 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/15 14:51:38 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,6 @@ Bureaucrat			&Bureaucrat::operator=( Bureaucrat const &bureCoppy )
 {
 	if ( this != &bureCoppy )
 	{
-		// this->_name = bureCoppy._name;
 		this->_grade = bureCoppy._grade;
 	}
 	

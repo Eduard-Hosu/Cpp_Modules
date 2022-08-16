@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 12:35:52 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/16 12:52:13 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/16 12:49:11 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,8 @@ Form::Form( Form const &formCoppy ) :
 
 Form &						Form::operator=( Form const &formCoppy )
 {
-	if ( this == &formCoppy )
-		return *this;
-	this->~Form();
-	new ( this ) Form( formCoppy );
+	if ( this != &formCoppy )
+		this->_signed = formCoppy.getSignature();
 	std::cout << "[Form] Copy assignment operator called" << std::endl;
 
 	return *this;
@@ -100,6 +98,11 @@ const char*					Form::GradeTooLowException::what() const throw()
 	return ("Grade is to low!");
 }
 
+const char*					Form::FormNotSignedException::what() const throw()
+{
+	return ("The form is not signed!");
+}
+
 std::ostream &				operator<<( std::ostream &COUT, Form const &formCoppy )
 {
 	COUT << "Form name is " << formCoppy.getName()
@@ -112,3 +115,26 @@ std::ostream &				operator<<( std::ostream &COUT, Form const &formCoppy )
 
 	return COUT;
 }
+
+void						Form::checkIfCanExecute( Bureaucrat const &executor ) const
+{
+	if (executor.getGrade() > this->getGradeToExecute() )
+		throw GradeTooLowException();
+	if (!this->getSignature())
+		throw FormNotSignedException();
+	// execute( executor );
+
+	return;
+}
+
+//CHECK: Other version, mehhh
+// void						Form::execute( Bureaucrat const &executor ) const
+// {
+// 	if (executor.getGrade() > this->getGradeToExecute() )
+// 		throw GradeTooLowException();
+// 	if (!this->getSignature())
+// 		throw FormNotSignedException();
+// 	checkIfCanExecute();
+
+// 	return;
+// }

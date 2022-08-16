@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 14:52:28 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/15 14:51:11 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/16 12:43:50 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,10 +135,62 @@ std::ostream		&operator<<( std::ostream &COUT, Bureaucrat const &bureCoppy )
 
 const char* 		Bureaucrat::gradeTooHighException::what() const throw()
 {
-	return ("Grade is too high!");
+	return ("Grade is to high!");
 }
 
 const char* 		Bureaucrat::gradeTooLowException::what() const throw()
 {
 	return ("Grade is to low!");
 }
+
+void				Bureaucrat::signForm( Form *formCoppy ) const
+{
+	if (!formCoppy)
+	{
+		std::cout << this->_name 
+			<< " tried to sign the form but there is no form!" << std::endl;
+		return;
+	}
+
+	try
+	{
+		//check this
+		formCoppy->beSigned(*this);
+		std::cout << this->_name << " signed " 
+				<< formCoppy->getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << this->_name << " couldn’t sign "
+				<< formCoppy->getName() << " because " 
+				<< e.what() << std::endl;
+	}
+	
+	return;
+}
+
+void				Bureaucrat::executeForm( Form const *form )
+{
+
+	if (!form)
+	{
+		std::cout << this->_name 
+			<< " tried to execute the form but there is no form!" << std::endl;
+		return;
+	}
+
+
+	try
+	{
+		form->execute(*this);
+		std::cout << this->_name << " executed " << form->getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << this->_name << " couldn’t execute "
+				<< form->getName() << " because "
+				<< e.what() << std::endl;
+	}
+
+}
+

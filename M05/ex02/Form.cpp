@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 12:35:52 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/01 21:03:11 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/16 12:51:59 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Form::Form( const std::string name, const int gradeToSign, const int gradeToExec
 		throw GradeTooHighException();
 	if (_gradeToSign > MIN_GRADE || _gradeToExecute > MIN_GRADE)
 		throw GradeTooLowException();
-	std::cout << "[From] Default constructor called with all variables assigned" << std::endl;
+	std::cout << "[Form] Default constructor called with all variables assigned" << std::endl;
 
 	return;
 }
@@ -45,7 +45,6 @@ Form::Form( Form const &formCoppy ) :
 	_name(formCoppy.getName()), _signed(formCoppy.getSignature()),
 	_gradeToSign(formCoppy.getGradeToSign()), _gradeToExecute(formCoppy.getGradeToExecute())
 {
-	*this = formCoppy;
 	std::cout << " [Form] Coppy constructor called" << std::endl;
 
 	return;
