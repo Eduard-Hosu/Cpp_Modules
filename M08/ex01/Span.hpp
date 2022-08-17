@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 12:24:58 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/15 13:40:55 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/17 11:24:56 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 # include <exception>
 # include <algorithm>
 # include <climits>
+# include <ctime>
+# include <cstdlib>
+# define MAX_RANGE 10
 
 class Span
 {
@@ -39,6 +42,8 @@ class Span
 		unsigned int			shortestSpan();
 		unsigned int			longestSpan();
 		void					printVector();
+		void					randomVector();
+		static int				randomNumb();
 
 		//exeptions
 		class outOfBoundsException : public std::exception

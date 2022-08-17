@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 18:40:34 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/15 13:45:15 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/17 11:24:43 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,4 +93,17 @@ const char*			Span::outOfBoundsException::what() const throw()
 const char*			Span::notenoughElementsException::what() const throw()
 {
 	return ("Operation not possible, not enough elements!");
+}
+
+void				Span::randomVector()
+{
+	std::generate(_vector.begin(), _vector.end(), randomNumb);
+
+	return;
+}
+
+int			Span::randomNumb()
+{
+	std::cout << "here" << std::endl;
+	return (std::rand() % MAX_RANGE);
 }
