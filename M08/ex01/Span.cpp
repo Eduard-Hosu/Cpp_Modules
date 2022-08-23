@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 18:40:34 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/17 11:24:43 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/19 12:08:41 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ Span::Span()
 
 Span::Span( unsigned int n ) : _n(n)
 {
+	std::vector<int> _vector (n);
 	return;
 }
 
@@ -97,13 +98,15 @@ const char*			Span::notenoughElementsException::what() const throw()
 
 void				Span::randomVector()
 {
-	std::generate(_vector.begin(), _vector.end(), randomNumb);
+	int oldSize = _vector.size();
+	_vector.resize(_n);
+	std::generate(_vector.begin() + oldSize, _vector.end(), randomNumb);
+	_n = _vector.size();
 
 	return;
 }
 
 int			Span::randomNumb()
 {
-	std::cout << "here" << std::endl;
 	return (std::rand() % MAX_RANGE);
 }

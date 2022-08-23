@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 12:24:58 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/17 11:24:56 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/19 12:08:23 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 # include <climits>
 # include <ctime>
 # include <cstdlib>
-# define MAX_RANGE 10
+# include <climits>
+# define MAX_RANGE 10000
 
 class Span
 {
