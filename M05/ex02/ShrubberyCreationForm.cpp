@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 10:21:29 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/02 11:31:05 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:10:15 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ ShrubberyCreationForm::ShrubberyCreationForm( const std::string target ) :
 ShrubberyCreationForm::ShrubberyCreationForm( ShrubberyCreationForm const &shrCreationForm ) :
 	Form(FORM_NAME, SIGN_GRADE, EXEC_GRADE)
 {
-	std::cout << " [ShrubberyForm] Coppy constructor called" << std::endl;
+	std::cout << " [ShrubberyForm] Copy constructor called" << std::endl;
 	*this = shrCreationForm;
 
 	return;

@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 17:42:43 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/31 10:54:06 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:10:15 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ class Bureaucrat
 		Bureaucrat( const std::string name );
 		Bureaucrat( const std::string name, const int grade );
 		Bureaucrat( const int grade );
-		Bureaucrat( Bureaucrat const &bureCoppy );
+		Bureaucrat( Bureaucrat const &bureCopy );
 		~Bureaucrat();
 
 		//operators
-		Bureaucrat &		operator=( Bureaucrat const &bureCoppy );
+		Bureaucrat &		operator=( Bureaucrat const &bureCopy );
 
 		//seters and getters
 		std::string			getName() const;
@@ -58,7 +58,7 @@ class Bureaucrat
 		};
 };
 
-std::ostream &		operator<<( std::ostream &COUT, Bureaucrat const &bureCoppy );
+std::ostream &		operator<<( std::ostream &COUT, Bureaucrat const &bureCopy );
 
 
 #endif // BUREAUCRAT

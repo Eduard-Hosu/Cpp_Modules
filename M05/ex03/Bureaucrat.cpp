@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 14:52:28 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/16 12:43:50 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:10:15 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,10 @@ Bureaucrat::Bureaucrat( const std::string name, const int grade ) : _name(name),
 	return;
 }
 
-Bureaucrat::Bureaucrat( Bureaucrat const &bureCoppy )
+Bureaucrat::Bureaucrat( Bureaucrat const &bureCopy )
 {
-	*this = bureCoppy;
-	std::cout << " [Bureaucrat] Coppy constructor called" << std::endl;
+	*this = bureCopy;
+	std::cout << " [Bureaucrat] Copy constructor called" << std::endl;
 	
 	return;
 }
@@ -103,11 +103,11 @@ void				Bureaucrat::incGrade()
 	return;
 }
 
-Bureaucrat			&Bureaucrat::operator=( Bureaucrat const &bureCoppy )
+Bureaucrat			&Bureaucrat::operator=( Bureaucrat const &bureCopy )
 {
-	if ( this != &bureCoppy )
+	if ( this != &bureCopy )
 	{
-		this->_grade = bureCoppy._grade;
+		this->_grade = bureCopy._grade;
 	}
 	
 	return *this;
@@ -126,9 +126,9 @@ void				Bureaucrat::_checkGrade() const
 	return;
 }
 
-std::ostream		&operator<<( std::ostream &COUT, Bureaucrat const &bureCoppy )
+std::ostream		&operator<<( std::ostream &COUT, Bureaucrat const &bureCopy )
 {
-	COUT << "Bureaucrat " << "name is " << bureCoppy.getName() << " and the grade is " << bureCoppy.getGrade() << std::endl;
+	COUT << "Bureaucrat " << "name is " << bureCopy.getName() << " and the grade is " << bureCopy.getGrade() << std::endl;
 
 	return COUT;
 }
@@ -143,9 +143,9 @@ const char* 		Bureaucrat::gradeTooLowException::what() const throw()
 	return ("Grade is to low!");
 }
 
-void				Bureaucrat::signForm( Form *formCoppy ) const
+void				Bureaucrat::signForm( Form *formCopy ) const
 {
-	if (!formCoppy)
+	if (!formCopy)
 	{
 		std::cout << this->_name 
 			<< " tried to sign the form but there is no form!" << std::endl;
@@ -155,14 +155,14 @@ void				Bureaucrat::signForm( Form *formCoppy ) const
 	try
 	{
 		//check this
-		formCoppy->beSigned(*this);
+		formCopy->beSigned(*this);
 		std::cout << this->_name << " signed " 
-				<< formCoppy->getName() << std::endl;
+				<< formCopy->getName() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
 		std::cerr << this->_name << " couldn’t sign "
-				<< formCoppy->getName() << " because " 
+				<< formCopy->getName() << " because " 
 				<< e.what() << std::endl;
 	}
 	

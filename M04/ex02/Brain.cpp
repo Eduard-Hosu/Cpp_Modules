@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 12:31:36 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/23 15:05:18 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:53 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,22 +38,22 @@ Brain::~Brain()
 	return;
 }
 
-Brain::Brain( Brain const &brainCoppy )
+Brain::Brain( Brain const &brainCopy )
 {
-	std::cout << " [Brain] Coppy constructor called" << std::endl;
-	*this = brainCoppy;
+	std::cout << " [Brain] Copy constructor called" << std::endl;
+	*this = brainCopy;
 
 	return;
 }
 
-Brain			&Brain::operator=( Brain const &brainCoppy )
+Brain			&Brain::operator=( Brain const &brainCopy )
 {
-	if (this != &brainCoppy)
+	if (this != &brainCopy)
 	{
 		for (unsigned int i = 0; i < MAX_NUMBER; i++)
-			_ideas[i] = brainCoppy._ideas[i];
+			_ideas[i] = brainCopy._ideas[i];
 	}
-	std::cout << " [Brain] Coppy assigment operator called" << std::endl;
+	std::cout << " [Brain] Copy assigment operator called" << std::endl;
 
 	return *this;
 }

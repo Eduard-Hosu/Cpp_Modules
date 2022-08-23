@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 12:01:43 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/01 15:53:33 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:07:24 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ class Fixed
 		Fixed( void );
 		Fixed( int const numb );
 		Fixed( float const numb );
-		Fixed( Fixed const &fixedCoppy );
+		Fixed( Fixed const &fixedCopy );
 		~Fixed();
 
-		Fixed &				operator=( Fixed const &fixedCoppy );
+		Fixed &				operator=( Fixed const &fixedCopy );
 
 		int					getRawBits( void ) const;
 		void				setRawBits( int const raw );
@@ -38,6 +38,6 @@ class Fixed
 		
 };
 
-std::ostream &		operator<<( std::ostream &o, Fixed const &fixedCoppy );
+std::ostream &		operator<<( std::ostream &o, Fixed const &fixedCopy );
 
 #endif

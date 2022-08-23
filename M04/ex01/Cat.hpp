@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 12:53:15 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/23 13:19:02 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:53 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ class Cat : public Animal
 		Brain			*_brain;
 	public:
 		Cat();
-		Cat( Cat const &catCoppy );
+		Cat( Cat const &catCopy );
 		~Cat();
 
-		Cat &		operator=( Cat const &catCoppy );
+		Cat &		operator=( Cat const &catCopy );
 		void		makeSound() const;
 };
 

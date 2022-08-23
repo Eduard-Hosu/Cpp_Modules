@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 18:23:12 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/24 19:25:19 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:53 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,21 @@ Cure::~Cure()
 	return;
 }
 
-Cure::Cure( Cure const &cureCoppy ) : AMateria("cure")
+Cure::Cure( Cure const &cureCopy ) : AMateria("cure")
 {
-	std::cout << " [Cure] Coppy constructor called" << std::endl;
-	*this = cureCoppy;
+	std::cout << " [Cure] Copy constructor called" << std::endl;
+	*this = cureCopy;
 
 	return;
 }
 
-Cure			&Cure::operator=( Cure const &cureCoppy )
+Cure			&Cure::operator=( Cure const &cureCopy )
 {
-	std::cout << " [Cure] Coppy assigment operator called" << std::endl;
-	if ( this != &cureCoppy )
+	std::cout << " [Cure] Copy assigment operator called" << std::endl;
+	if ( this != &cureCopy )
 	{
 		//TO DO: needs to e updated
-		this->_type = cureCoppy._type;
+		this->_type = cureCopy._type;
 	}
 
 	return *this;

@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 11:19:58 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/25 13:13:20 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:53 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ class Character : public ICharacter
 	public:
 		Character();
 		Character( std::string name );
-		Character( Character const &characterCoppy );
+		Character( Character const &characterCopy );
 		~Character();
 
-		Character &			operator=( Character const &characterCoppy );
+		Character &			operator=( Character const &characterCopy );
 	
 		std::string const 	&getName() const;
 

@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 08:13:40 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/23 08:48:54 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:53 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ class WrongCat : public WrongAnimal
 	public:
 		WrongCat();
 		~WrongCat();
-		WrongCat( WrongCat const &wrongCatCoppy );
+		WrongCat( WrongCat const &wrongCatCopy );
 
-		WrongCat &		operator=( WrongCat const &wrongCatCoppy );
+		WrongCat &		operator=( WrongCat const &wrongCatCopy );
 		void			makeSound() const;
 };
 

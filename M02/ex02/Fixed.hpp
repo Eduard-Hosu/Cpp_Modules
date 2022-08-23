@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 12:01:43 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/07 16:55:17 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:07:24 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,31 +26,31 @@ class Fixed
 		Fixed( void );
 		Fixed( int const numb );
 		Fixed( float const numb );
-		Fixed( Fixed const &fixedCoppy );
+		Fixed( Fixed const &fixedCopy );
 		~Fixed();
 		
-		Fixed &				operator=( Fixed const &fixedCoppy );
-		Fixed				operator+( Fixed const &fixedCoppy );
-		Fixed				operator-( Fixed const &fixedCoppy );
-		Fixed				operator*( Fixed const &fixedCoppy );
-		Fixed				operator/( Fixed const &fixedCoppy );
+		Fixed &				operator=( Fixed const &fixedCopy );
+		Fixed				operator+( Fixed const &fixedCopy );
+		Fixed				operator-( Fixed const &fixedCopy );
+		Fixed				operator*( Fixed const &fixedCopy );
+		Fixed				operator/( Fixed const &fixedCopy );
 
 		Fixed				operator++( int );
 		Fixed &				operator++( void );
 		Fixed				operator--( int );
 		Fixed &				operator--( void );
 
-		bool				operator<( Fixed const &fixedCoppy );
-		bool				operator>( Fixed const &fixedCoppy );
-		bool				operator>=( Fixed const &fixedCoppy );
-		bool				operator<=( Fixed const &fixedCoppy );
-		bool				operator==( Fixed const &fixedCoppy );
-		bool				operator!=( Fixed const &fixedCoppy );
+		bool				operator<( Fixed const &fixedCopy );
+		bool				operator>( Fixed const &fixedCopy );
+		bool				operator>=( Fixed const &fixedCopy );
+		bool				operator<=( Fixed const &fixedCopy );
+		bool				operator==( Fixed const &fixedCopy );
+		bool				operator!=( Fixed const &fixedCopy );
 
-		static Fixed &			min( Fixed &fixedCoppy1, Fixed &fixedCoppy2 );
-		static Fixed const 		&min( Fixed const &fixedCoppy1, Fixed const &fixedCoppy2 );
-		static Fixed &			max( Fixed &fixedCoppy1, Fixed &fixedCoppy2 );
-		static Fixed const		&max( Fixed const &fixedCoppy1, Fixed const &fixedCoppy2 );
+		static Fixed &			min( Fixed &fixedCopy1, Fixed &fixedCopy2 );
+		static Fixed const 		&min( Fixed const &fixedCopy1, Fixed const &fixedCopy2 );
+		static Fixed &			max( Fixed &fixedCopy1, Fixed &fixedCopy2 );
+		static Fixed const		&max( Fixed const &fixedCopy1, Fixed const &fixedCopy2 );
 
 		int					getRawBits( void ) const;
 		void				setRawBits( int const raw );
@@ -58,6 +58,6 @@ class Fixed
 		int					toInt( void ) const;
 };
 
-std::ostream &		operator<<( std::ostream &o, Fixed const &fixedCoppy );
+std::ostream &		operator<<( std::ostream &o, Fixed const &fixedCopy );
 
 #endif

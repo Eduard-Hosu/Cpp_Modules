@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 12:57:17 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/12 15:36:22 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:53 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,20 +26,20 @@ Cat::~Cat()
 	return;
 }
 
-Cat::Cat( Cat const &catCoppy ) : Animal("Cat")
+Cat::Cat( Cat const &catCopy ) : Animal("Cat")
 {
-	std::cout << " [Cat] Coppy constructor called" << std::endl;
-	*this = catCoppy;
+	std::cout << " [Cat] Copy constructor called" << std::endl;
+	*this = catCopy;
 
 	return;
 }
 
-Cat		&Cat::operator=( Cat const &catCoppy )
+Cat		&Cat::operator=( Cat const &catCopy )
 {
-	std::cout << " [Cat] Coppy assigment operator called" << std::endl;
-	if ( this != &catCoppy )
+	std::cout << " [Cat] Copy assigment operator called" << std::endl;
+	if ( this != &catCopy )
 	{
-		this->_type = catCoppy._type;
+		this->_type = catCopy._type;
 		this->_brain = new Brain();
 	}
 	

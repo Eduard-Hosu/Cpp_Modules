@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 16:30:37 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/11 13:20:12 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:12:09 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ class Array
 	public:
 		Array();
 		Array( unsigned int n );
-		Array( Array const &arrayCoppy );
+		Array( Array const &arrayCopy );
 		~Array();
 		
-		Array &			operator=( Array const &arrayCoppy );
+		Array &			operator=( Array const &arrayCopy );
 		//check const
 		T &				operator[]( unsigned int const &ind );
 
@@ -59,30 +59,30 @@ Array<T>::Array( unsigned int n ) :
 }
 
 template <typename T>
-Array<T>::Array( Array<T> const &arrayCoppy ) : 
-	_n(arrayCoppy.size()), _array(new T[arrayCoppy.size()])
+Array<T>::Array( Array<T> const &arrayCopy ) : 
+	_n(arrayCopy.size()), _array(new T[arrayCopy.size()])
 {
 	for (unsigned int i = 0; i < _n; i++)
-		_array[i] = arrayCoppy._array[i];
+		_array[i] = arrayCopy._array[i];
 
 	return;
 }
 
 template <typename T>
-Array<T>		&Array<T>::operator=( Array<T> const &arrayCoppy )
+Array<T>		&Array<T>::operator=( Array<T> const &arrayCopy )
 {
-	if ( this == &arrayCoppy)
+	if ( this == &arrayCopy)
 		return *this;
 
+	//OLD VERSION
 	// delete[] _array;
-	// _n = arrayCoppy.size();
-	// _array = new T[arrayCoppy.size()];
-
+	// _n = arrayCopy.size();
+	// _array = new T[arrayCopy.size()];
 	// for (unsigned int i = 0; i < _n; i++)
-	// 	_array[i] = arrayCoppy._array[i];
+	// 	_array[i] = arrayCopy._array[i];
 
 	this->~Array();
-	new(this) Array<T> (arrayCoppy);
+	new(this) Array<T> (arrayCopy);
 
 	return *this;
 }

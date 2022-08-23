@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 11:36:02 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/27 11:41:48 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:53 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,27 +40,27 @@ Character::~Character()
 	return;
 }
 
-Character::Character( Character const &characterCoppy )
+Character::Character( Character const &characterCopy )
 {
-	std::cout << " [Character] Coppy constructor called" << std::endl;
-	*this = characterCoppy;
+	std::cout << " [Character] Copy constructor called" << std::endl;
+	*this = characterCopy;
 
 	return;
 }
 
-Character			&Character::operator=( Character const &characterCoppy )
+Character			&Character::operator=( Character const &characterCopy )
 {
-	std::cout << " [Character] Coppy assigment operator called" << std::endl;
-	if (this != &characterCoppy)
+	std::cout << " [Character] Copy assigment operator called" << std::endl;
+	if (this != &characterCopy)
 	{
-		_name = characterCoppy._name;
+		_name = characterCopy._name;
 		for (unsigned int i = 0; i < MAX_SLOTS; i++)
 		{
 			//delete materia first if exists
 			if (_inv[i])
 				delete _inv[i];
 			//clone the materia in the new slot
-			_inv[i] = characterCoppy._inv[i]->clone();
+			_inv[i] = characterCopy._inv[i]->clone();
 		}
 	}
 

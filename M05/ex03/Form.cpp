@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 12:35:52 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/16 12:49:11 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:10:15 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,19 +41,19 @@ Form::~Form()
 	return;
 }
 
-Form::Form( Form const &formCoppy ) :
-	_name(formCoppy.getName()), _signed(formCoppy.getSignature()),
-	_gradeToSign(formCoppy.getGradeToSign()), _gradeToExecute(formCoppy.getGradeToExecute())
+Form::Form( Form const &formCopy ) :
+	_name(formCopy.getName()), _signed(formCopy.getSignature()),
+	_gradeToSign(formCopy.getGradeToSign()), _gradeToExecute(formCopy.getGradeToExecute())
 {
-	std::cout << " [Form] Coppy constructor called" << std::endl;
+	std::cout << " [Form] Copy constructor called" << std::endl;
 
 	return;
 }
 
-Form &						Form::operator=( Form const &formCoppy )
+Form &						Form::operator=( Form const &formCopy )
 {
-	if ( this != &formCoppy )
-		this->_signed = formCoppy.getSignature();
+	if ( this != &formCopy )
+		this->_signed = formCopy.getSignature();
 	std::cout << "[Form] Copy assignment operator called" << std::endl;
 
 	return *this;
@@ -79,9 +79,9 @@ bool						Form::getSignature() const
 	return this->_signed;
 }
 
-void						Form::beSigned( Bureaucrat const &burCoppy )
+void						Form::beSigned( Bureaucrat const &burCopy )
 {
-	if (burCoppy.getGrade() > this->_gradeToSign)
+	if (burCopy.getGrade() > this->_gradeToSign)
 		throw GradeTooLowException();
 	this->_signed = true;
 
@@ -103,12 +103,12 @@ const char*					Form::FormNotSignedException::what() const throw()
 	return ("The form is not signed!");
 }
 
-std::ostream &				operator<<( std::ostream &COUT, Form const &formCoppy )
+std::ostream &				operator<<( std::ostream &COUT, Form const &formCopy )
 {
-	COUT << "Form name is " << formCoppy.getName()
-			<< " * Grade to sign is " << formCoppy.getGradeToSign()
-			<< " * Grade to execute is " << formCoppy.getGradeToExecute() << std::endl;
-	if (formCoppy.getSignature())
+	COUT << "Form name is " << formCopy.getName()
+			<< " * Grade to sign is " << formCopy.getGradeToSign()
+			<< " * Grade to execute is " << formCopy.getGradeToExecute() << std::endl;
+	if (formCopy.getSignature())
 		COUT << "Form is signed!" << std::endl;
 	else
 		COUT << "Form is not signed!" << std::endl;

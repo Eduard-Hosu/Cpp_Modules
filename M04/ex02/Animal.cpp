@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 18:48:40 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/23 16:10:14 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:53 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,19 @@ Animal::Animal( std::string type ) : _type(type)
 	return;
 }
 
-Animal::Animal( Animal const &animalCoppy )
+Animal::Animal( Animal const &animalCopy )
 {
-	std::cout << " [Animal] Coppy constructor called" << std::endl;
-	*this = animalCoppy;
+	std::cout << " [Animal] Copy constructor called" << std::endl;
+	*this = animalCopy;
 
 	return;
 }
 
-Animal			&Animal::operator=( Animal const &animalCoppy )
+Animal			&Animal::operator=( Animal const &animalCopy )
 {
-	std::cout << " [Animal] Coppy assigment operator called" << std::endl;
-	if ( this != &animalCoppy )
-		this->_type = animalCoppy._type;
+	std::cout << " [Animal] Copy assigment operator called" << std::endl;
+	if ( this != &animalCopy )
+		this->_type = animalCopy._type;
 	
 	return *this;
 }

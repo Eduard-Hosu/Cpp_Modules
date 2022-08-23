@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 10:44:15 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/16 11:35:52 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:10:15 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,19 @@ Intern::~Intern()
 	return;
 }
 
-Intern::Intern( Intern const &internCoppy )
+Intern::Intern( Intern const &internCopy )
 {
-	*this = internCoppy;
+	*this = internCopy;
 
 	return;
 }
 
-Intern &		Intern::operator=( Intern const &internCoppy )
+Intern &		Intern::operator=( Intern const &internCopy )
 {
-	if (this == &internCoppy)
+	if (this == &internCopy)
 		return *this;
 	this->~Intern();
-	new (this) Intern(internCoppy);
+	new (this) Intern(internCopy);
 
 	return *this;
 }

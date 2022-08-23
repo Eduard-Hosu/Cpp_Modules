@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 20:01:46 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/01 21:01:04 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:10:15 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ PresidentialPardonForm::PresidentialPardonForm( const std::string target ) :
 PresidentialPardonForm::PresidentialPardonForm( PresidentialPardonForm const &prPardonForm ) :
 	Form(PR_FORM_NAME, PR_SIGN_GRADE, PR_EXEC_GRADE)
 {
-	std::cout << " [PresidentialPardonForm] Coppy constructor called" << std::endl;
+	std::cout << " [PresidentialPardonForm] Copy constructor called" << std::endl;
 	*this = prPardonForm;
 
 	return;

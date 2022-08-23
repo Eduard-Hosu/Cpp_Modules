@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 16:47:41 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/23 08:12:35 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:53 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,18 @@ WrongAnimal::~WrongAnimal()
 	return;
 }
 
-WrongAnimal::WrongAnimal( WrongAnimal const &wrogAnimalCoppy )
+WrongAnimal::WrongAnimal( WrongAnimal const &wrogAnimalCopy )
 {
-	std::cout << "[WrongAnimal] Coppy constructor called" << std::endl;
-	*this = wrogAnimalCoppy;
+	std::cout << "[WrongAnimal] Copy constructor called" << std::endl;
+	*this = wrogAnimalCopy;
 	return;
 }
 
-WrongAnimal			&WrongAnimal::operator=( WrongAnimal const &wrongAnimalCoppy )
+WrongAnimal			&WrongAnimal::operator=( WrongAnimal const &wrongAnimalCopy )
 {
-	std::cout << " [WrongAnimal] Coppy assigment operator called" << std::endl;
-	if ( this != &wrongAnimalCoppy )
-		this->_type = wrongAnimalCoppy._type;
+	std::cout << " [WrongAnimal] Copy assigment operator called" << std::endl;
+	if ( this != &wrongAnimalCopy )
+		this->_type = wrongAnimalCopy._type;
 
 	return *this;
 }

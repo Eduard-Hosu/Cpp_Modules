@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 12:47:11 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/06 13:48:17 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:07:24 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,18 @@ Fixed::~Fixed()
 	return;
 }
 
-Fixed::Fixed( Fixed const &fixedCoppy )
+Fixed::Fixed( Fixed const &fixedCopy )
 {
 	std::cout << "Copy constructor called" << std::endl;
-	*this = fixedCoppy;
+	*this = fixedCopy;
 	return;
 }
 
-Fixed	&Fixed::operator=( Fixed const &fixedCoppy )
+Fixed	&Fixed::operator=( Fixed const &fixedCopy )
 {
 	std::cout << "Copy assignment operator called" << std::endl;
-	if ( this != &fixedCoppy )
-		_fixedPointNumber = fixedCoppy.getRawBits();
+	if ( this != &fixedCopy )
+		_fixedPointNumber = fixedCopy.getRawBits();
 	return *this;
 
 }

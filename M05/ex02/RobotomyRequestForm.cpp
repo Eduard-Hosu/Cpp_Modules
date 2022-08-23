@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 19:34:35 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/01 21:01:56 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:10:15 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ RobotomyRequestForm::RobotomyRequestForm( const std::string target ) :
 RobotomyRequestForm::RobotomyRequestForm( RobotomyRequestForm const &roboRequestForm ) :
 	Form(ROBO_FORM_NAME, ROBO_SIGN_GRADE, ROBO_EXEC_GRADE)
 {
-	std::cout << " [RobotomyForm] Coppy constructor called" << std::endl;
+	std::cout << " [RobotomyForm] Copy constructor called" << std::endl;
 	*this = roboRequestForm;
 
 	return;

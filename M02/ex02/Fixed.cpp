@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 12:47:11 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/01 16:18:02 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:07:24 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ Fixed::~Fixed()
 	return;
 }
 
-Fixed::Fixed( Fixed const &fixedCoppy )
+Fixed::Fixed( Fixed const &fixedCopy )
 {
 	// std::cout << "Copy constructor called" << std::endl;
-	*this = fixedCoppy;
+	*this = fixedCopy;
 	return;
 }
 
@@ -47,93 +47,93 @@ Fixed::Fixed( float const numb )
 
 
 
-Fixed		&Fixed::min( Fixed &fixedCoppy1, Fixed &fixedCoppy2 )
+Fixed		&Fixed::min( Fixed &fixedCopy1, Fixed &fixedCopy2 )
 {
-	if ( fixedCoppy1.getRawBits() < fixedCoppy2.getRawBits() )
-		return fixedCoppy1;
-	return fixedCoppy2;
+	if ( fixedCopy1.getRawBits() < fixedCopy2.getRawBits() )
+		return fixedCopy1;
+	return fixedCopy2;
 }
 
-Fixed const	&Fixed::min( Fixed const &fixedCoppy1, Fixed const &fixedCoppy2 )
+Fixed const	&Fixed::min( Fixed const &fixedCopy1, Fixed const &fixedCopy2 )
 {
-	if ( fixedCoppy1.getRawBits() < fixedCoppy2.getRawBits() )
-		return fixedCoppy1;
-	return fixedCoppy2;
+	if ( fixedCopy1.getRawBits() < fixedCopy2.getRawBits() )
+		return fixedCopy1;
+	return fixedCopy2;
 }
 
-Fixed		&Fixed::max( Fixed &fixedCoppy1, Fixed &fixedCoppy2 )
+Fixed		&Fixed::max( Fixed &fixedCopy1, Fixed &fixedCopy2 )
 {
-	if ( fixedCoppy1.getRawBits() > fixedCoppy2.getRawBits() )
-		return fixedCoppy1;
-	return fixedCoppy2;
+	if ( fixedCopy1.getRawBits() > fixedCopy2.getRawBits() )
+		return fixedCopy1;
+	return fixedCopy2;
 }
 
-Fixed const	&Fixed::max( Fixed const &fixedCoppy1, Fixed const &fixedCoppy2 )
+Fixed const	&Fixed::max( Fixed const &fixedCopy1, Fixed const &fixedCopy2 )
 {
-	if ( fixedCoppy1.getRawBits() > fixedCoppy2.getRawBits() )
-		return fixedCoppy1;
-	return fixedCoppy2;
+	if ( fixedCopy1.getRawBits() > fixedCopy2.getRawBits() )
+		return fixedCopy1;
+	return fixedCopy2;
 }
 
 
-Fixed	&Fixed::operator=( Fixed const &fixedCoppy )
+Fixed	&Fixed::operator=( Fixed const &fixedCopy )
 {
 	// std::cout << "Copy assignment operator called" << std::endl;
-	if ( this != &fixedCoppy )
-		_fixedPointNumber = fixedCoppy.getRawBits();
+	if ( this != &fixedCopy )
+		_fixedPointNumber = fixedCopy.getRawBits();
 	return *this;
 }
 
-Fixed	Fixed::operator+( Fixed const &fixedCoppy )
+Fixed	Fixed::operator+( Fixed const &fixedCopy )
 {
-	return ( Fixed(this->toFloat() + fixedCoppy.toFloat()) );
+	return ( Fixed(this->toFloat() + fixedCopy.toFloat()) );
 }
 
-Fixed	Fixed::operator-( Fixed const &fixedCoppy )
+Fixed	Fixed::operator-( Fixed const &fixedCopy )
 {
-	return ( Fixed(this->toFloat() - fixedCoppy.toFloat()) );
+	return ( Fixed(this->toFloat() - fixedCopy.toFloat()) );
 }
 
-Fixed	Fixed::operator*( Fixed const &fixedCoppy )
+Fixed	Fixed::operator*( Fixed const &fixedCopy )
 {
-	return ( Fixed(this->toFloat() * fixedCoppy.toFloat()) );
+	return ( Fixed(this->toFloat() * fixedCopy.toFloat()) );
 }
 
-Fixed	Fixed::operator/( Fixed const &fixedCoppy )
+Fixed	Fixed::operator/( Fixed const &fixedCopy )
 {
-	return ( Fixed(this->toFloat() / fixedCoppy.toFloat()) );
+	return ( Fixed(this->toFloat() / fixedCopy.toFloat()) );
 }
 
 
 
-bool	Fixed::operator>( Fixed const &fixedCoppy )
+bool	Fixed::operator>( Fixed const &fixedCopy )
 {
-	return ( _fixedPointNumber > fixedCoppy.getRawBits() );
+	return ( _fixedPointNumber > fixedCopy.getRawBits() );
 }
 
-bool	Fixed::operator<( Fixed const &fixedCoppy )
+bool	Fixed::operator<( Fixed const &fixedCopy )
 {
-	return ( _fixedPointNumber < fixedCoppy.getRawBits() );
+	return ( _fixedPointNumber < fixedCopy.getRawBits() );
 }
 
-bool	Fixed::operator>=( Fixed const &fixedCoppy )
+bool	Fixed::operator>=( Fixed const &fixedCopy )
 {
-	return ( _fixedPointNumber >= fixedCoppy.getRawBits() );
+	return ( _fixedPointNumber >= fixedCopy.getRawBits() );
 }
 
-bool	Fixed::operator<=( Fixed const &fixedCoppy )
+bool	Fixed::operator<=( Fixed const &fixedCopy )
 {
-	return ( _fixedPointNumber <= fixedCoppy.getRawBits() );
+	return ( _fixedPointNumber <= fixedCopy.getRawBits() );
 }
 
-bool	Fixed::operator==( Fixed const &fixedCoppy )
+bool	Fixed::operator==( Fixed const &fixedCopy )
 {
-	return ( _fixedPointNumber == fixedCoppy.getRawBits() );
+	return ( _fixedPointNumber == fixedCopy.getRawBits() );
 }
 
-bool	Fixed::operator!=( Fixed const &fixedCoppy )
+bool	Fixed::operator!=( Fixed const &fixedCopy )
 {
-	return ( _fixedPointNumber != fixedCoppy.getRawBits() );
+	return ( _fixedPointNumber != fixedCopy.getRawBits() );
 }
 
 Fixed	Fixed::operator++( int )
@@ -185,8 +185,8 @@ float	Fixed::toFloat( void ) const
 	return (this->_fixedPointNumber / (float)(1 << _numberFractionalBits));
 }
 
-std::ostream &		operator<<( std::ostream &o, Fixed const &fixedCoppy )
+std::ostream &		operator<<( std::ostream &o, Fixed const &fixedCopy )
 {
-	o << fixedCoppy.toFloat();
+	o << fixedCopy.toFloat();
 	return o;
 }

@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 18:40:34 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/19 12:08:41 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:11:06 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,19 @@ Span::~Span()
 	return;
 }
 
-Span::Span( Span const &spanCoppy )
+Span::Span( Span const &spanCopy )
 {
-	*this = spanCoppy;
+	*this = spanCopy;
 
 	return;
 }
 
-Span &				Span::operator=( Span const &spanCoppy )
+Span &				Span::operator=( Span const &spanCopy )
 {
-	if (this != &spanCoppy)
+	if (this != &spanCopy)
 	{
-		this->_n = spanCoppy._n;
-		this->_vector = spanCoppy._vector;
+		this->_n = spanCopy._n;
+		this->_vector = spanCopy._vector;
 	}
 
 	return *this;

@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 08:23:14 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/23 08:36:58 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:53 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,18 @@ WrongCat::~WrongCat()
 	return;
 }
 
-WrongCat::WrongCat( WrongCat const &wrogCatCoppy ) : WrongAnimal("Wrong Cat")
+WrongCat::WrongCat( WrongCat const &wrogCatCopy ) : WrongAnimal("Wrong Cat")
 {
-	std::cout << "[WrongCat] Coppy constructor called" << std::endl;
-	*this = wrogCatCoppy;
+	std::cout << "[WrongCat] Copy constructor called" << std::endl;
+	*this = wrogCatCopy;
 	return;
 }
 
-WrongCat			&WrongCat::operator=( WrongCat const &wrongCatCoppy )
+WrongCat			&WrongCat::operator=( WrongCat const &wrongCatCopy )
 {
-	std::cout << " [WrongCat] Coppy assigment operator called" << std::endl;
-	if ( this != &wrongCatCoppy )
-		this->_type = wrongCatCoppy._type;
+	std::cout << " [WrongCat] Copy assigment operator called" << std::endl;
+	if ( this != &wrongCatCopy )
+		this->_type = wrongCatCopy._type;
 
 	return *this;
 }

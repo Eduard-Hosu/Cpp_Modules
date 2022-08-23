@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 10:18:26 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/16 11:34:21 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:10:15 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ class Intern
 {
 	public:
 		Intern();
-		Intern( Intern const &internCoppy );
+		Intern( Intern const &internCopy );
 		~Intern();
 
-		Intern &	operator=( Intern const &internCoppy );
+		Intern &	operator=( Intern const &internCopy );
 
 		Form *		makeForm(const std::string &formName, const std::string &formTarget);
 	

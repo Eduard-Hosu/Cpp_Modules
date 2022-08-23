@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 02:37:01 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/23 09:20:15 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:53 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,19 @@ Dog::~Dog()
 	return;
 }
 
-Dog::Dog( Dog const &dogCoppy ) : Animal("Dog")
+Dog::Dog( Dog const &dogCopy ) : Animal("Dog")
 {
-	std::cout << " [Dog] Coppy constructor called" << std::endl;
-	*this = dogCoppy;
+	std::cout << " [Dog] Copy constructor called" << std::endl;
+	*this = dogCopy;
 
 	return;
 }
 
-Dog		&Dog::operator=( Dog const &dogCoppy )
+Dog		&Dog::operator=( Dog const &dogCopy )
 {
-	std::cout << " [Dog] Coppy assigment operator called" << std::endl;
-	if ( this != &dogCoppy )
-		this->_type = dogCoppy._type;
+	std::cout << " [Dog] Copy assigment operator called" << std::endl;
+	if ( this != &dogCopy )
+		this->_type = dogCopy._type;
 	
 	return *this;
 }

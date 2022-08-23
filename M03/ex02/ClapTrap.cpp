@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 12:20:32 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/08 13:53:36 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:41 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,23 +34,23 @@ ClapTrap::ClapTrap( std::string name ) :
 	return;
 }
 
-ClapTrap::ClapTrap( ClapTrap const &clapTrapCoppy )
+ClapTrap::ClapTrap( ClapTrap const &clapTrapCopy )
 {
-	std::cout << "Coppy constructor called" << std::endl;
-	*this = clapTrapCoppy;
+	std::cout << "Copy constructor called" << std::endl;
+	*this = clapTrapCopy;
 	return;
 }
 
 
-ClapTrap	&ClapTrap::operator=( ClapTrap const &clapTrapCoppy )
+ClapTrap	&ClapTrap::operator=( ClapTrap const &clapTrapCopy )
 {
 	std::cout << "Copy assignment operator called" << std::endl;
-	if ( this != &clapTrapCoppy )
+	if ( this != &clapTrapCopy )
 	{
-		this->_name = clapTrapCoppy._name;
-		this->_attackDamage = clapTrapCoppy._attackDamage;
-		this->_energy = clapTrapCoppy._energy;
-		this->_health = clapTrapCoppy._health;
+		this->_name = clapTrapCopy._name;
+		this->_attackDamage = clapTrapCopy._attackDamage;
+		this->_energy = clapTrapCopy._energy;
+		this->_health = clapTrapCopy._health;
 	}
 	
 	return *this;

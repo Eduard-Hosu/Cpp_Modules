@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 16:08:25 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/20 16:17:45 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:41 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ class FragTrap : public ClapTrap
 	public:
 		FragTrap();
 		FragTrap( std::string name );
-		FragTrap( FragTrap const &fragTrapCoppy );
+		FragTrap( FragTrap const &fragTrapCopy );
 		~FragTrap();
 
-		FragTrap &	operator=( FragTrap const &fragtrapCoppy );
+		FragTrap &	operator=( FragTrap const &fragtrapCopy );
 		void		highFivesGuys( void );
 };
 

@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:09:06 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/08 18:41:59 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:10:45 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ Type const & min(Type const &x, Type const &y)
 template< typename Type >
 void 		swap(Type &x, Type &y)
 {
-	Type coppy;
+	Type Copy;
 
-	coppy = x;
+	Copy = x;
 	x = y;
-	y = coppy;
+	y = Copy;
 
 	return ;
 }

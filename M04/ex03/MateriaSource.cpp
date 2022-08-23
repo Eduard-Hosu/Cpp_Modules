@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 11:20:10 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/27 15:08:40 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:53 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,24 +31,24 @@ MateriaSource::~MateriaSource()
 	return;
 }
 
-MateriaSource::MateriaSource( MateriaSource const &materiaSourceCoppy )
+MateriaSource::MateriaSource( MateriaSource const &materiaSourceCopy )
 {
-	std::cout << " [ MateriaSource ] Coppy constructor called" << std::endl;
-	*this = materiaSourceCoppy;
+	std::cout << " [ MateriaSource ] Copy constructor called" << std::endl;
+	*this = materiaSourceCopy;
 
 	return;
 }
 
-MateriaSource		&MateriaSource::operator=( MateriaSource const &materiaSourceCoppy )
+MateriaSource		&MateriaSource::operator=( MateriaSource const &materiaSourceCopy )
 {
-	std::cout << " [MateriaSource] Coppy assigment operator called" << std::endl;
-	if (this != &materiaSourceCoppy)
+	std::cout << " [MateriaSource] Copy assigment operator called" << std::endl;
+	if (this != &materiaSourceCopy)
 	{
 		for (unsigned int i = 0; i < MAX_MATERIA; i++)
 		{
 			if (_materia[i])
 				delete _materia[i];
-			_materia[i] = materiaSourceCoppy._materia[i]->clone();
+			_materia[i] = materiaSourceCopy._materia[i]->clone();
 		}
 	}
 

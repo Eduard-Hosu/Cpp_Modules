@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 18:05:08 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/24 19:20:45 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:53 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,21 @@ Ice::~Ice()
 	return;
 }
 
-Ice::Ice( Ice const &iceCoppy ) : AMateria("ice")
+Ice::Ice( Ice const &iceCopy ) : AMateria("ice")
 {
-	std::cout << " [Ice] Coppy constructor called" << std::endl;
-	*this = iceCoppy;
+	std::cout << " [Ice] Copy constructor called" << std::endl;
+	*this = iceCopy;
 
 	return;
 }
 
-Ice			&Ice::operator=( Ice const &iceCoppy )
+Ice			&Ice::operator=( Ice const &iceCopy )
 {
-	std::cout << " [Ice] Coppy assigment operator called" << std::endl;
-	if ( this != &iceCoppy )
+	std::cout << " [Ice] Copy assigment operator called" << std::endl;
+	if ( this != &iceCopy )
 	{
 		//TO DO: needs to e updated
-		this->_type = iceCoppy._type;
+		this->_type = iceCopy._type;
 	}
 	
 	return *this;

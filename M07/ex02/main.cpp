@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 19:38:21 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/11 13:11:51 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:10:45 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int main()
 	{
 		std::cerr << e.what() << '\n';
 	}
-	//Try coppy constructor
+	//Try Copy constructor
 	std::cout << "Check new test_array content" << std::endl;
 
 	Array<int> test = example;

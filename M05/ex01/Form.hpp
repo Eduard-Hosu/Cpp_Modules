@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 11:14:32 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/31 15:15:38 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:10:15 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ class Form
 	public:
 		Form();
 		Form( const std::string name, const int gradeToSign, const int gradeToExecute );
-		Form( Form const &formCoppy );
+		Form( Form const &formCopy );
 		~Form();
 
 		//operators
-		Form &					operator=( Form const &formCoppy );
+		Form &					operator=( Form const &formCopy );
 
 		//setters and getters
 		const std::string		getName() const;
@@ -42,7 +42,7 @@ class Form
 		bool					getSignature() const;
 
 		//member functions
-		void					beSigned( Bureaucrat const &burCoppy );
+		void					beSigned( Bureaucrat const &burCopy );
 
 		//nest classes
 		class GradeTooHighException : public std::exception
@@ -58,6 +58,6 @@ class Form
 
 };
 
-std::ostream &					operator<<( std::ostream &COUT, Form const &formCoppy );
+std::ostream &					operator<<( std::ostream &COUT, Form const &formCopy );
 
 #endif // FORM_HPP

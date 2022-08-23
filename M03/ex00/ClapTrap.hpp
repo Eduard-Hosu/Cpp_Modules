@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 12:03:26 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/08 13:36:11 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:41 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ class ClapTrap
 	public:
 		ClapTrap( void );
 		ClapTrap( std::string name );
-		ClapTrap( ClapTrap const &clapTrapCoppy );
+		ClapTrap( ClapTrap const &clapTrapCopy );
 		~ClapTrap( void );
 
-		ClapTrap &		operator=( ClapTrap const &clapTrapCoppy );
+		ClapTrap &		operator=( ClapTrap const &clapTrapCopy );
 
 		void			attack(const std::string& target);
 		void			takeDamage(unsigned int amount);

@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 12:20:41 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/23 14:52:50 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:53 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ class Brain
 	public:
 		Brain();
 		Brain( std::string type );
-		Brain( Brain const &brainCoppy );
+		Brain( Brain const &brainCopy );
 		~Brain();
 
-	Brain &				operator=( Brain const &brainCoppy );
+	Brain &				operator=( Brain const &brainCopy );
 	void				setIdea( unsigned int idea_index, std::string idea );
 	std::string			getIdea( unsigned int idea_index ) const;
 	

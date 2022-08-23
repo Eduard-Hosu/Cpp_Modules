@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 17:53:57 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/23 13:42:04 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:53 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ class Animal
 	public:
 		Animal();
 		Animal( std::string type );
-		Animal( Animal const &animalCoppy );
+		Animal( Animal const &animalCopy );
 		virtual			~Animal();
 
-		Animal &		operator=( Animal const &animalCoppy );
+		Animal &		operator=( Animal const &animalCopy );
 
 		std::string		getType() const;
 		virtual void	makeSound() const;

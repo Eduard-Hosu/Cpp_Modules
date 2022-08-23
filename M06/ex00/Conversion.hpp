@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 18:54:57 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/04 18:21:35 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:10:31 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,11 @@ class Conversion
 	public:
 		Conversion();
 		Conversion( const std::string input );
-		Conversion( Conversion const &conversionCoppy );
+		Conversion( Conversion const &conversionCopy );
 		~Conversion();
 
 		//operators
-		Conversion &		operator=( Conversion const &conversionCoppy );
+		Conversion &		operator=( Conversion const &conversionCopy );
 
 		//member functions
 		conv_type			getInputType();

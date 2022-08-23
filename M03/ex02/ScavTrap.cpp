@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 15:18:55 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/19 16:59:17 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:41 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,23 +38,23 @@ ScavTrap::ScavTrap( std::string name ) : ClapTrap(name)
 	return;
 }
 
-ScavTrap::ScavTrap( ScavTrap const &scavTrapCoppy ) : ClapTrap(scavTrapCoppy._name)
+ScavTrap::ScavTrap( ScavTrap const &scavTrapCopy ) : ClapTrap(scavTrapCopy._name)
 {
-	std::cout << "[ ScavTrap ] Coppy constructor called" << std::endl;
-	*this = scavTrapCoppy;
+	std::cout << "[ ScavTrap ] Copy constructor called" << std::endl;
+	*this = scavTrapCopy;
 	return;
 }
 
-ScavTrap	&ScavTrap::operator=( ScavTrap const &scavTrapCoppy )
+ScavTrap	&ScavTrap::operator=( ScavTrap const &scavTrapCopy )
 {
-	std::cout << "[ ScavTrap ] Coppy assigment operator called" << std::endl;
-	if ( this != &scavTrapCoppy )
+	std::cout << "[ ScavTrap ] Copy assigment operator called" << std::endl;
+	if ( this != &scavTrapCopy )
 	{
-		this->_name = scavTrapCoppy._name;
-		this->_attackDamage = scavTrapCoppy._attackDamage;
-		this->_energy = scavTrapCoppy._energy;
-		this->_health = scavTrapCoppy._health;
-		this->_gardGateMode = scavTrapCoppy._gardGateMode;
+		this->_name = scavTrapCopy._name;
+		this->_attackDamage = scavTrapCopy._attackDamage;
+		this->_energy = scavTrapCopy._energy;
+		this->_health = scavTrapCopy._health;
+		this->_gardGateMode = scavTrapCopy._gardGateMode;
 	}
 
 	return *this;

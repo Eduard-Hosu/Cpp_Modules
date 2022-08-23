@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 16:40:19 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/12 12:31:25 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:53 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,20 +30,20 @@ AMateria::~AMateria()
 	return;
 }
 
-AMateria::AMateria( AMateria const &aMateriaCoppy )
+AMateria::AMateria( AMateria const &aMateriaCopy )
 {
-	std::cout << " [AMateria] Coppy constructor called" << std::endl;
-	*this = aMateriaCoppy;
+	std::cout << " [AMateria] Copy constructor called" << std::endl;
+	*this = aMateriaCopy;
 
 	return;
 }
 
-AMateria			&AMateria::operator=( AMateria const &aMateriaCoppy )
+AMateria			&AMateria::operator=( AMateria const &aMateriaCopy )
 {
-	std::cout << " [AMateria] Coppy assigment operator called" << std::endl;
-	if ( this != &aMateriaCoppy )
+	std::cout << " [AMateria] Copy assigment operator called" << std::endl;
+	if ( this != &aMateriaCopy )
 	{
-		this->_type = aMateriaCoppy._type;
+		this->_type = aMateriaCopy._type;
 	}
 	
 	return *this;

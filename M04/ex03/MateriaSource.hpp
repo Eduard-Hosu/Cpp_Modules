@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 10:54:07 by ehosu             #+#    #+#             */
-/*   Updated: 2022/07/27 11:16:50 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:09:53 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ class MateriaSource : public IMateriaSource
 		AMateria*			_materia[MAX_MATERIA];
 	public:
 		MateriaSource();
-		MateriaSource( MateriaSource const &materiaSourceCoppy );
+		MateriaSource( MateriaSource const &materiaSourceCopy );
 		~MateriaSource();
 
-		MateriaSource &		operator=( MateriaSource const &materiaSourceCoppy );
+		MateriaSource &		operator=( MateriaSource const &materiaSourceCopy );
 
 		void				learnMateria( AMateria* );
 		AMateria*			createMateria( std::string const & type );

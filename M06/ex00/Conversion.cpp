@@ -6,7 +6,7 @@
 /*   By: ehosu <ehosu@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 14:22:57 by ehosu             #+#    #+#             */
-/*   Updated: 2022/08/05 15:15:07 by ehosu            ###   ########.fr       */
+/*   Updated: 2022/08/23 16:10:31 by ehosu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,20 @@ Conversion::~Conversion()
 	return;
 }
 
-Conversion::Conversion( Conversion const &conversionCoppy )
+Conversion::Conversion( Conversion const &conversionCopy )
 {
-	*this = conversionCoppy;
+	*this = conversionCopy;
 
 	return;
 }
 
-Conversion &			Conversion::operator=( Conversion const &conversionCoppy )
+Conversion &			Conversion::operator=( Conversion const &conversionCopy )
 {
-	if (this != &conversionCoppy)
+	if (this != &conversionCopy)
 	{
-		this->_input = conversionCoppy._input;
-		this->_inputValue = conversionCoppy._inputValue;
-		this->_inputType = conversionCoppy._inputType;
+		this->_input = conversionCopy._input;
+		this->_inputValue = conversionCopy._inputValue;
+		this->_inputType = conversionCopy._inputType;
 	}
 
 	return *this;
